@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:background="@color/yello_orange"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    >
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wh_icon_imageview"
+        android:textSize="45sp"
+        android:text="@string/weather_sunny"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/temp_tv"
+        android:text="85"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/wh_icon_imageview"
+        android:layout_centerVertical="true"
+        android:background="@drawable/circle_temp_background"
+        android:padding="8dp"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forecast_day_tv"
+        android:text="sunday"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="16dp"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/wh_icon_imageview"
+        android:layout_centerVertical="true"
+        />
+
+
+
+
+</RelativeLayout>
