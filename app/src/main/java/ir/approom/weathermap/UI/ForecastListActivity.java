@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import ir.approom.weathermap.DetailActivity;
 import ir.approom.weathermap.R;
 
 public class ForecastListActivity extends AppCompatActivity implements WeatherForecastListFragment.CallBack {
@@ -48,7 +47,7 @@ public class ForecastListActivity extends AppCompatActivity implements WeatherFo
     public void onItemClickForecastList(String dataModel) {
 
         if (mTowPane){
-            
+
             replaceFragment(dataModel);
 
         }else{

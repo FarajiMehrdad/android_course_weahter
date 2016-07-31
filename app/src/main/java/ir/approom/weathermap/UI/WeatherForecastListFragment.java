@@ -1,6 +1,5 @@
 package ir.approom.weathermap.UI;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -17,7 +16,6 @@ import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import ir.approom.weathermap.DetailActivity;
 import ir.approom.weathermap.R;
 import ir.approom.weathermap.Util;
 import ir.approom.weathermap.model.ForecastModel;
@@ -60,6 +58,7 @@ public class WeatherForecastListFragment extends Fragment implements AdapterView
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         fetchData();
+        callBack = (CallBack) getActivity();
 
     }
 
@@ -132,12 +131,16 @@ public class WeatherForecastListFragment extends Fragment implements AdapterView
 
     }
 
+    CallBack callBack;
+
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
         WeahterModel model = weahterModels.get(position);
         Gson jsonModel = new Gson();
         String jsonObject = jsonModel.toJson(model);
+        callBack.onItemClickForecastList(jsonObject);
+
 
     }
 

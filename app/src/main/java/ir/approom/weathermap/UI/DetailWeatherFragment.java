@@ -13,7 +13,6 @@ import com.google.gson.Gson;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import ir.approom.weathermap.DetailActivity;
 import ir.approom.weathermap.R;
 import ir.approom.weathermap.model.WeahterModel;
 
