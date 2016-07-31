@@ -14,7 +14,8 @@
         <activity android:name=".MainActivity">
 
         </activity>
-        <activity android:name=".UI.ForecastListActivity">
+        <activity android:name=".UI.ForecastListActivity"
+            >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:name="ir.approom.weathermap.UI.DetailWeatherFragment"
+    android:name="ir.approom.weathermap.UI.WeatherForecastListFragment"
     tools:context=".MainActivity"
     tools:layout="@layout/fragment_detail_weather">
 

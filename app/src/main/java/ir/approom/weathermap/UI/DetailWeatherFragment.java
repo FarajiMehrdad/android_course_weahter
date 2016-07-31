@@ -23,6 +23,13 @@ public class DetailWeatherFragment extends Fragment {
     }
 
 
+
+    public static DetailWeatherFragment newInstance(){
+        DetailWeatherFragment detailWeatherFragment = new DetailWeatherFragment();
+        return  detailWeatherFragment;
+    }
+
+
     public WeahterModel weather;
 
 
