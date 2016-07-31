@@ -9,8 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import ir.approom.weathermap.DetailActivity;
 import ir.approom.weathermap.R;
 import ir.approom.weathermap.model.WeahterModel;
 
@@ -22,10 +25,17 @@ public class DetailWeatherFragment extends Fragment {
         // Required empty public constructor
     }
 
+    WeahterModel weahterModel;
 
 
-    public static DetailWeatherFragment newInstance(){
+
+    public static DetailWeatherFragment newInstance(String params){
         DetailWeatherFragment detailWeatherFragment = new DetailWeatherFragment();
+
+
+        Bundle bundle = new Bundle();
+        bundle.putString(DetailActivity.DataWeatherModel , params);
+        detailWeatherFragment.setArguments(bundle);
         return  detailWeatherFragment;
     }
 
@@ -42,9 +52,16 @@ public class DetailWeatherFragment extends Fragment {
     //@BindView(R.id.city_name_tv) ImageView iconImageView;
 
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        String model = getArguments().getString(DetailActivity.DataWeatherModel);
+        Gson gson = new Gson();
+        weahterModel = gson.fromJson(model , WeahterModel.class);
 
 
-
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

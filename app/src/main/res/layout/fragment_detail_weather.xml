@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/yello_orange"
-    tools:context="ir.approom.weathermap.MainActivity">
+    tools:context=".DetailActivity">
 
 
     <RelativeLayout

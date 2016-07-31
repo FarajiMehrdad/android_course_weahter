@@ -17,7 +17,7 @@ import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import ir.approom.weathermap.MainActivity;
+import ir.approom.weathermap.DetailActivity;
 import ir.approom.weathermap.R;
 import ir.approom.weathermap.Util;
 import ir.approom.weathermap.model.ForecastModel;
@@ -133,9 +133,19 @@ public class WeatherForecastListFragment extends Fragment implements AdapterView
     }
 
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
-        Intent intent = new Intent(getContext() , MainActivity.class);
-        startActivity(intent);
+        WeahterModel model = weahterModels.get(position);
+        Gson jsonModel = new Gson();
+        String jsonObject = jsonModel.toJson(model);
+
     }
+
+    public interface CallBack{
+
+        void onItemClickForecastList(String dataModel);
+    }
+
+
+
 }
