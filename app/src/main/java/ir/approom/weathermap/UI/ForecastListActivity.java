@@ -86,7 +86,7 @@ public class ForecastListActivity extends AppCompatActivity implements WeatherFo
 
             }
         }else{
-
+            Log.d("gcm","google play service is not available ");
             storeRegisterId(null);
         }
     }
@@ -125,6 +125,8 @@ public class ForecastListActivity extends AppCompatActivity implements WeatherFo
                             GoogleCloudMessaging.INSTANCE_ID_SCOPE, null);
                     String msg = "Device registered, registration ID=" + token;
 
+                    //// TODO: 8/2/16 AD  send token key to server
+                    //// TODO: 8/2/16 AD save token in sharePref
                     Log.d("gcm", msg);
                 } catch (IOException e) {
                     e.printStackTrace();

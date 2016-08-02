@@ -24,6 +24,7 @@ public class WeatherGcmReciver extends GcmListenerService {
         Log.d("Gcm Listener" , "the bundle " + bundle);
         sendNotification(s);
 
+
     }
 
 
