@@ -5,6 +5,9 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
+
 /**
  * Created by MehrdadFaraji on 7/26/16 AD.
  */
@@ -44,6 +47,19 @@ public class Util {
         Log.d("Utils" , "the resource name" + resourceId);
 
         return resourceId;
+    }
+
+
+    public static boolean isGooglePlayServicesAvailable(Context context){
+
+        GoogleApiAvailability googleApiAvailability = GoogleApiAvailability.getInstance();
+        int status = googleApiAvailability.isGooglePlayServicesAvailable(context);
+        if(status != ConnectionResult.SUCCESS) {
+
+            return false;
+        }else {
+            return true;
+        }
     }
 
 

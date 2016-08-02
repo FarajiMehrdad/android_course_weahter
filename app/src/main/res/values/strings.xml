@@ -15,6 +15,17 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="menu">menu</string>
 
+    <string name="open_weather_api_key">b8ed861af728e441d41f2cf4c1c1c2fa</string>
+    <string name="open_weather_appid">appid</string>
+    <string name="open_weather_lat">lat</string>
+    <string name="open_weather_lon">lon</string>
+    <string name="open_weather_cnt">cnt</string>
+    <string name="open_weather_units">units</string>
+    <string name="open_weather_mode">mode</string>
+    <string name="open_weather_json_mode">json</string>
+    <string name="title_activity_maps">Map</string>
 
+
+    <string name="database_name">weather.db</string>
 
 </resources>

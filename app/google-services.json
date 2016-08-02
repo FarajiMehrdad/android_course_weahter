@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "766567097829",
+    "project_id": "weather-27724"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766567097829:android:f4eb9e7a4c2dad84",
+        "android_client_info": {
+          "package_name": "ir.approom.weathermap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWYwRt0NdlblpwYX2VGHzg-H83DdCTowo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
